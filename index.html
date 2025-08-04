@@ -297,6 +297,30 @@
       aspect-ratio: 4/3;
     }
 
+    /* Logo specific styling */
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .logo-container .media-container {
+      max-width: 300px;
+      margin: 0;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 8px 25px rgba(33, 150, 243, 0.2);
+      border: 2px solid rgba(33, 150, 243, 0.1);
+    }
+
+    .logo-container img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      border-radius: 8px;
+    }
+
     /* Sections */
     .section {
       padding: 80px 0;
@@ -395,6 +419,12 @@
         padding: 15px;
       }
 
+      .logo-container .media-container {
+        max-width: 250px;
+        padding: 12px;
+        margin: 0 auto 20px;
+      }
+
       .section {
         padding: 60px 0;
       }
@@ -418,6 +448,11 @@
       }
 
       .media-container {
+        padding: 10px;
+      }
+
+      .logo-container .media-container {
+        max-width: 200px;
         padding: 10px;
       }
 
@@ -498,11 +533,13 @@
     <div class="container">
       
       <div class="hero-content">
-                <div class="media-container">
-          <img src="https://lh3.googleusercontent.com/d/1GbqLifA3p2Tj5e4xcZHy1zD9LAtK1Icl" 
-               alt="Vista Externa"
-               loading="lazy">
-        </div>  
+        <div class="logo-container">
+          <div class="media-container">
+            <img src="https://lh3.googleusercontent.com/d/1GbqLifA3p2Tj5e4xcZHy1zD9LAtK1Icl" 
+                 alt="HHAutosales Logo"
+                 loading="lazy">
+          </div>  
+        </div>
         <h1>Especialistas en Importación de Buses y Camiones</h1>
 
         <p>Especialistas en Importación de Buses y Camiones</p>
@@ -637,4 +674,3 @@
 </body>
 
 </html>
-
