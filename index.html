@@ -40,8 +40,17 @@
       z-index: 1000;
     }
 
+    header .logo {
+      font-size: 32px;
+      font-weight: bold;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
     header .logo img {
-      height: 60px;
+      height: 50px;
       width: auto;
     }
 
@@ -170,6 +179,19 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
+    /* Responsive Images */
+    .responsive-img {
+      max-width: 100%;
+      width: 100%;
+      max-width: 640px;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border: 1px solid #ccc;
+    }
+
     /* Sections */
     .section {
       padding: 80px 40px;
@@ -195,6 +217,7 @@
   <header>
     <div class="logo">
       <img src="https://drive.google.com/uc?export=view&id=1_NPywyk2Ya5O1pVM7NsI20y9ERHSsv9d" alt="HHAutosales Logo">
+      HHAutosales
     </div>
     <nav>
       <div class="dropdown">
@@ -229,7 +252,7 @@
   <section class="hero">
     <p>Especialistas en importación y transporte de vehículos.</p>
 
-    <h2>Especificaciones de Fabricante para el modelo 2025</h2>
+    <h2>Especificaciones de Fabricante para el modelo Standard 2025</h2>
     <ul>
       <li>Chasis JAC.</li>
       <li>Motor Cummins ISF 3.8cc con 140 HP.</li>
@@ -239,12 +262,18 @@
       <li>Asientos reclinables.</li>
       <li>Espacio interno para maletas, único en el mercado.</li>
       <li>Capacidad para 26 pasajeros.</li>
-      <li>Pasillos sin asientos (opcionalmente se podrían agregar).</li>
+      <li>Pasillos sin asientos </li>
+    </ul>
+    <h2>Extras</h2>
+      <li>Asientos de pasillo </li>
+      <li>Grada Electronica</li>
     </ul>
 
+    <h2>Vista Externa</h2>
     <h3>Vista Externa</h3>
-    <iframe src="https://drive.google.com/file/d/1xFwf4xcqvDLMtsnQ3M-qgw1BM2QO6Ng1/preview" width="640" height="480"
-      allow="autoplay" loading="lazy"></iframe>
+    <img src="https://drive.google.com/uc?export=view&id=1xFwf4xcqvDLMtsnQ3M-qgw1BM2QO6Ng1" 
+       alt="Vista Externa del Microbus" 
+       class="responsive-img">
 
     <h3>Puerta de Ingreso de pasajeros</h3>
     <iframe 
@@ -253,20 +282,53 @@
     </iframe>
 
     <h3>Cargador USB en cada asiento</h3>
-    <iframe src="https://drive.google.com/file/d/1AsA2ZP_AJF9LYbFt5ElyEt-yNVGqvKYF/preview" width="640" height="480"
-      allow="autoplay" loading="lazy"></iframe>
+    <img src="https://drive.google.com/uc?export=view&id=1AsA2ZP_AJF9LYbFt5ElyEt-yNVGqvKYF" 
+       alt="Cargador USB en cada asiento" 
+       class="responsive-img">
 
     <h3>Vista de pasillo</h3>
-    <iframe src="https://drive.google.com/file/d/1xrN84UGWy8FxWQsr5FUeGiBOmkmlv7-5/preview" width="640" height="480"
-      allow="autoplay" loading="lazy"></iframe>
+    <img src="https://drive.google.com/uc?export=view&id=1xrN84UGWy8FxWQsr5FUeGiBOmkmlv7-5" 
+       alt="Vista de pasillo del microbus" 
+       class="responsive-img">
 
     <h3>Vista del Área de Motor</h3>
-    <iframe src="https://drive.google.com/file/d/1t-c27IcD1dtCSRvI9gA2PpehMOCTFmfS/preview" width="640" height="480"
-      allow="autoplay" loading="lazy"></iframe>
+    <img src="https://drive.google.com/uc?export=view&id=1t-c27IcD1dtCSRvI9gA2PpehMOCTFmfS" 
+       alt="Vista del área de motor" 
+       class="responsive-img">
 
     <h3>Vista Maletero interno de pasillo y salida de aire acondicionado</h3>
-    <iframe src="https://drive.google.com/file/d/1V4lUvGLCXCmjH3KyXWhUoBOB_NnkGWRK/preview" width="640" height="480"
-      allow="autoplay" loading="lazy"></iframe>
+    <img src="https://drive.google.com/uc?export=view&id=1V4lUvGLCXCmjH3KyXWhUoBOB_NnkGWRK" 
+       alt="Vista maletero interno de pasillo y salida de aire acondicionado" 
+       class="responsive-img">
+
+    <h2>Modelo Superior</h2>
+
+    <h2>Especificaciones de Fabricante para el modelo Standard 2025</h2>
+    <ul>
+      <li>Chasis JAC.</li>
+      <li>Motor Cummins ISF x.xcc con xxx HP.</li>
+      <li>Frenos de aire.</li>
+      <li>A/C.</li>
+      <li>Puertos de carga USB en cada asiento.</li>
+      <li>Asientos reclinables.</li>
+      <li>Espacio interno para maletas, único en el mercado.</li>
+      <li>Capacidad para 35 pasajeros.</li>
+      <li>Pasillos sin asientos </li>
+    </ul>
+    <h2>Extras</h2>
+      <li>Asientos de pasillo </li>
+      <li>Grada Electronica</li>
+    </ul>
+
+    <h3>Vista Externa</h3>
+    <img src="https://drive.google.com/uc?export=view&id=1jJtM2U2pEa-snFlQK65aqOVy6qOP3XZY" 
+       alt="Vista Externa del Modelo Superior" 
+       style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    
+    <h3>Vista Interna</h3>
+    <img src="https://drive.google.com/uc?export=view&id=1JhSZnWznaVzblR9kAqyE780ITDgf8jvc" 
+       alt="Vista interna del modelo superior" 
+       class="responsive-img">
   </section>
 
   <!-- Conózcanos Section -->
