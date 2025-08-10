@@ -192,6 +192,54 @@
       border: 1px solid #ccc;
     }
 
+    /* Tabs */
+    .tabs {
+      margin: 40px 0;
+    }
+
+    .tab-buttons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    .tab-button {
+      background: none;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #666;
+      cursor: pointer;
+      transition: all 1.3s ease;
+      border-bottom: 3px solid transparent;
+      margin: 0 10px;
+    }
+
+    .tab-button.active {
+      color: #007BFF;
+      border-bottom-color: #007BFF;
+    }
+
+    .tab-button:hover {
+      color: #007BFF;
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     /* Sections */
     .section {
       padding: 80px 40px;
@@ -252,84 +300,96 @@
   <section class="hero">
     <p>Especialistas en importación y transporte de vehículos.</p>
 
-    <h2>Especificaciones de Fabricante para el modelo Standard 2025</h2>
-    <ul>
-      <li>Chasis JAC.</li>
-      <li>Motor Cummins ISF 3.8cc con 140 HP.</li>
-      <li>Frenos de aire.</li>
-      <li>A/C.</li>
-      <li>Puertos de carga USB en cada asiento.</li>
-      <li>Asientos reclinables.</li>
-      <li>Espacio interno para maletas, único en el mercado.</li>
-      <li>Capacidad para 26 pasajeros.</li>
-      <li>Pasillos sin asientos </li>
-    </ul>
-    <h2>Extras</h2>
-    <ul>
-      <li>Asientos de pasillo </li>
-      <li>Grada Electronica</li>
-    </ul>
+    <!-- Tabs -->
+    <div class="tabs">
+      <div class="tab-buttons">
+        <button class="tab-button active" onclick="showTab('standard')">Modelo Standard 2025</button>
+        <button class="tab-button" onclick="showTab('superior')">Modelo Superior</button>
+      </div>
 
-    <h3>Vista Externa</h3>
-    <img src="https://drive.google.com/thumbnail?id=1xFwf4xcqvDLMtsnQ3M-qgw1BM2QO6Ng1&sz=w800" 
-       alt="Vista Externa del Microbus" 
-       class="responsive-img">
+      <!-- Standard Model Tab -->
+      <div id="standard" class="tab-content active">
+        <h2>Especificaciones de Fabricante para el modelo Standard 2025</h2>
+        <ul>
+          <li>Chasis JAC.</li>
+          <li>Motor Cummins ISF 3.8cc con 140 HP.</li>
+          <li>Frenos de aire.</li>
+          <li>A/C.</li>
+          <li>Puertos de carga USB en cada asiento.</li>
+          <li>Asientos reclinables.</li>
+          <li>Espacio interno para maletas, único en el mercado.</li>
+          <li>Capacidad para 26 pasajeros.</li>
+          <li>Pasillos sin asientos </li>
+        </ul>
+        <h2>Extras</h2>
+        <ul>
+          <li>Asientos de pasillo </li>
+          <li>Grada Electronica</li>
+        </ul>
 
-    <h3>Puerta de Ingreso de pasajeros</h3>
-    <iframe 
-      width="640" height="480" src="https://www.youtube.com/embed/Ds_lMbB5mKU?si=ofvleOY0E1vzPCm4?autoplay=1&mute=1"
-      allow="autoplay" loading="lazy">
-    </iframe>
+        <h3>Vista Externa</h3>
+        <img src="https://drive.google.com/thumbnail?id=1xFwf4xcqvDLMtsnQ3M-qgw1BM2QO6Ng1&sz=w800" 
+           alt="Vista Externa del Microbus" 
+           class="responsive-img">
 
-    <h3>Cargador USB en cada asiento</h3>
-    <img src="https://drive.google.com/thumbnail?id=1AsA2ZP_AJF9LYbFt5ElyEt-yNVGqvKYF&sz=w800" 
-       alt="Cargador USB en cada asiento" 
-       class="responsive-img">
+        <h3>Puerta de Ingreso de pasajeros</h3>
+        <iframe 
+          width="640" height="480" src="https://www.youtube.com/embed/Ds_lMbB5mKU?si=ofvleOY0E1vzPCm4?autoplay=1&mute=1"
+          allow="autoplay" loading="lazy">
+        </iframe>
 
-    <h3>Vista de pasillo</h3>
-    <img src="https://drive.google.com/thumbnail?id=1xrN84UGWy8FxWQsr5FUeGiBOmkmlv7-5&sz=w800" 
-       alt="Vista de pasillo del microbus" 
-       class="responsive-img">
+        <h3>Cargador USB en cada asiento</h3>
+        <img src="https://drive.google.com/thumbnail?id=1AsA2ZP_AJF9LYbFt5ElyEt-yNVGqvKYF&sz=w800" 
+           alt="Cargador USB en cada asiento" 
+           class="responsive-img">
 
-    <h3>Vista del Área de Motor</h3>
-    <img src="https://drive.google.com/thumbnail?id=1t-c27IcD1dtCSRvI9gA2PpehMOCTFmfS&sz=w800" 
-       alt="Vista del área de motor" 
-       class="responsive-img">
+        <h3>Vista de pasillo</h3>
+        <img src="https://drive.google.com/thumbnail?id=1xrN84UGWy8FxWQsr5FUeGiBOmkmlv7-5&sz=w800" 
+           alt="Vista de pasillo del microbus" 
+           class="responsive-img">
 
-    <h3>Vista Maletero interno de pasillo y salida de aire acondicionado</h3>
-    <img src="https://drive.google.com/thumbnail?id=1V4lUvGLCXCmjH3KyXWhUoBOB_NnkGWRK&sz=w800" 
-       alt="Vista maletero interno de pasillo y salida de aire acondicionado" 
-       class="responsive-img">
+        <h3>Vista del Área de Motor</h3>
+        <img src="https://drive.google.com/thumbnail?id=1t-c27IcD1dtCSRvI9gA2PpehMOCTFmfS&sz=w800" 
+           alt="Vista del área de motor" 
+           class="responsive-img">
 
-    <h2>Modelo Superior</h2>
+        <h3>Vista Maletero interno de pasillo y salida de aire acondicionado</h3>
+        <img src="https://drive.google.com/thumbnail?id=1V4lUvGLCXCmjH3KyXWhUoBOB_NnkGWRK&sz=w800" 
+           alt="Vista maletero interno de pasillo y salida de aire acondicionado" 
+           class="responsive-img">
+      </div>
 
-    <h3>Especificaciones de Fabricante para el modelo Standard 2025</h2>
-    <ul>
-      <li>Chasis JAC.</li>
-      <li>Motor Cummins ISF x.xcc con xxx HP.</li>
-      <li>Frenos de aire.</li>
-      <li>A/C.</li>
-      <li>Puertos de carga USB en cada asiento.</li>
-      <li>Asientos reclinables.</li>
-      <li>Espacio interno para maletas, único en el mercado.</li>
-      <li>Capacidad para 35 pasajeros.</li>
-      <li>Pasillos sin asientos </li>
-    </ul>
-    <h2>Extras</h2>
-    <ul>
-      <li>Asientos de pasillo </li>
-      <li>Grada Electronica</li>
-    </ul>
+      <!-- Superior Model Tab -->
+      <div id="superior" class="tab-content">
+        <h2>Especificaciones de Fabricante para el modelo Superior 2025</h2>
+        <ul>
+          <li>Chasis JAC.</li>
+          <li>Motor Cummins ISF x.xcc con xxx HP.</li>
+          <li>Frenos de aire.</li>
+          <li>A/C.</li>
+          <li>Puertos de carga USB en cada asiento.</li>
+          <li>Asientos reclinables.</li>
+          <li>Espacio interno para maletas, único en el mercado.</li>
+          <li>Capacidad para 35 pasajeros.</li>
+          <li>Pasillos sin asientos </li>
+        </ul>
+        <h2>Extras</h2>
+        <ul>
+          <li>Asientos de pasillo </li>
+          <li>Grada Electronica</li>
+        </ul>
 
-    <h3>Vista Externa</h3>
-    <img src="https://drive.google.com/thumbnail?id=1jJtM2U2pEa-snFlQK65aqOVy6qOP3XZY&sz=w800" 
-       alt="Vista Externa del Modelo Superior" 
-       class="responsive-img">
-    
-    <h3>Vista Interna</h3>
-    <img src="https://drive.google.com/thumbnail?id=1JhSZnWznaVzblR9kAqyE780ITDgf8jvc&sz=w800" 
-       alt="Vista interna del modelo superior" 
-       class="responsive-img">
+        <h3>Vista Externa</h3>
+        <img src="https://drive.google.com/thumbnail?id=1jJtM2U2pEa-snFlQK65aqOVy6qOP3XZY&sz=w800" 
+           alt="Vista Externa del Modelo Superior" 
+           class="responsive-img">
+        
+        <h3>Vista Interna</h3>
+        <img src="https://drive.google.com/thumbnail?id=1JhSZnWznaVzblR9kAqyE780ITDgf8jvc&sz=w800" 
+           alt="Vista interna del modelo superior" 
+           class="responsive-img">
+      </div>
+    </div>
   </section>
 
   <!-- Conózcanos Section -->
@@ -349,6 +409,28 @@
     <h2>Contáctenos</h2>
     <p>Estamos aquí para ayudarle. Contáctenos a través de WhatsApp o Email.</p>
   </section>
+
+  <script>
+    function showTab(tabName) {
+      // Hide all tab contents
+      const tabContents = document.querySelectorAll('.tab-content');
+      tabContents.forEach(tab => {
+        tab.classList.remove('active');
+      });
+
+      // Remove active class from all buttons
+      const tabButtons = document.querySelectorAll('.tab-button');
+      tabButtons.forEach(button => {
+        button.classList.remove('active');
+      });
+
+      // Show selected tab content
+      document.getElementById(tabName).classList.add('active');
+
+      // Add active class to clicked button
+      event.target.classList.add('active');
+    }
+  </script>
 </body>
 
 </html>
